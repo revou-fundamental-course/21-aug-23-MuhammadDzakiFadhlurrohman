@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link id="theme-style" rel="stylesheet" href="asset/style.css">
+  <title>Latihan Website</title>
+</head>
+
+
+<body>
+  <script src="asset/script.js"></script>
+  <!-- HEADER SECTION -->
+  <header id="persist-header">
+    <a href="https://revou.co">
+      <img src="asset/profile.jpeg" class="logo">
+    </a>
+    <nav>
+      <a href="#home-section" class="home">Home</a>
+      <a href="#profile-section" class="profile">My Profile</a>
+      <a href="" class="achievement">Achievement</a>
+      <a href="#message-section" class="message">Message Us</a>
+    </nav>
+  </header>
+
+  <!-- MAIN SECTION -->
+  <main id="home-section">
+    <!-- HOME SECTION -->
+    <section class="home-section">
+      <section class="welcome-text">
+        <p id="welcome-text1">Hi World, welcome to my website!</p>
+        <p id="welcome-text2">Ini adalah website latihan pertama
+        </p>
+      </section>
+      <section class="banner-container">
+      <img src="asset/bground.jpeg" alt="banner" />
+      </section>
+    </section>
+
+    <!-- PROFILE SECTION -->
+    <section class="profile-section" id="profile-section">
+      <p id="title-section1">Let's get closer with me!</p>
+      <section class="facilities-container">
+        <section class="facilities-box">
+          <img src="https://www.myinstants.com/media/instants_images/screenshot-2015-06-16-at-7.png" alt="first-picture" />
+          <p>Professional Teacher</p>
+        </section>
+        <section class="facilities-box">
+          <img src="https://www.myinstants.com/media/instants_images/screenshot-2015-06-16-at-7.png" alt="second-picture" />
+          <p>Sport Field</p>
+        </section>
+        <section class="facilities-box">
+          <img src="https://www.myinstants.com/media/instants_images/screenshot-2015-06-16-at-7.png" alt="third-picture" />
+          <p>Classroom</p>
+        </section>
+      </section>
+    </section>
+
+    <main id="home-section">
+        <!-- HOME SECTION -->
+        <section class="home-section">
+          <section class="welcome-text">
+            <p id="welcome-text1">Achivement</p>
+            <p id="welcome-text2">Please validate your name here</p>
+          </section>
+          <img src="" class="banner" />
+        </section>
+
+    <!-- MESSAGE US SECTION -->
+    <section class="message-section" id="message-section">
+      <p id="title-section2">Let me know about you!</p>
+      <section class="message-container">
+        <!-- MESSAGE INPUT SECTION -->
+        <article class="message-input">
+          <section class="form-row">
+            <label class="label" for="nama">Nama</label>
+            <label class="colon" for="colon">: </label>
+            <input class="textbox" type="text" id="nama" name="nama">
+          </section>
+          <section class="form-row">
+            <label class="label" for="born">Tanggal Lahir</label>
+            <label class="colon" for="colon">: </label>
+            <input class="textbox" type="date" id="born">
+          </section>
+          <section class="form-row">
+            <label class="label">Jenis Kelamin</label>
+            <label class="colon" for="colon">: </label>
+            <section class="radio-group">
+              <label><input type="radio" name="gender" value="laki-laki">Laki-laki</label>
+              <label><input type="radio" name="gender" value="Perempuan">Perempuan</label>
+            </section>
+          </section>
+          <section class="form-row">
+            <label class="label" for="message">Pesan</label>
+            <label class="colon" for="colon">: </label>
+            <textarea class="textbox" name="message" rows="5"></textarea>
+          </section>
+          <button onclick="result()">Submit</button>
+        </article>
+        <!-- MESSAGE OUTPUT SECTION -->
+        <article class="message-output">
+          <textarea id="result-section" readonly="readonly" placeholder="Result"></textarea>
+        </article>
+        <script>
+          // Fungsi untuk menampilkan hasil input
+          function result() {
+            // Ambil nilai dari input
+            const nama = document.getElementById("nama").value;
+            const born = document.getElementById("born").value;
+            const gender = document.querySelector('input[name="gender"]:checked').value;
+            const message = document.querySelector('textarea[name="message"]').value;
+
+            const resultText = `
+Nama: ${nama}
+Tanggal Lahir: ${born}
+Jenis Kelamin: ${gender}
+Pesan: ${message}`;
+            // Masukkan hasil ke dalam elemen result-section
+            const resultSection = document.getElementById("result-section");
+            resultSection.innerHTML = resultText;
+          }
+        </script>
+      </section>
+    </section>
+  </main>
+  <!-- FOOTER SECTION -->
+  <footer>
+    <p>Created by RevoU</p>
+  </footer>
+
+</body>
+
+</html>
